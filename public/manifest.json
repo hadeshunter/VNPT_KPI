@@ -1,0 +1,20 @@
+{
+  "short_name": "VNPT KPI FIBER",
+  "name": "VNPT KPI FIBER",
+  "description": "Chương trình tính kpi phát triển mới và thanh lý Fiber",
+  "icons": [
+    {
+      "src": "/icon-square.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-square.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#fdb913",
+  "background_color": "#ffffff"
+}

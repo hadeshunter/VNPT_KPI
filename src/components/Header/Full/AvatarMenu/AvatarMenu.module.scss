@@ -1,0 +1,21 @@
+@import "core";
+
+.tag {
+  margin-left: 4px;
+}
+
+.notify {
+  font-size: 12px !important;
+  max-width: 200px;
+}
+
+.cartHeading {
+  font-family: Oswald;
+  font-size: 18px;
+}
+
+.content {
+  @include media(phone) {
+    display: none !important;
+  }
+}

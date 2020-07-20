@@ -1,0 +1,16 @@
+@import "core";
+
+.full {
+  @include media(phone) {
+    display: none;
+  }
+}
+
+.mobile {
+  @include media(tablet) {
+    display: none;
+  }
+  @include media(pc) {
+    display: none;
+  }
+}

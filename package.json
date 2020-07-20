@@ -8,8 +8,27 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.4.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "@blueprintjs/core": "^3.28.0",
+    "@svgr/webpack": "^5.4.0",
+    "@types/classnames": "^2.2.9",
+    "@types/node": "12.7.1",
+    "@types/react": "^16.9.23",
+    "@types/react-redux": "^7.1.2",
+    "classnames": "^2.2.6",
+    "gray-matter": "^4.0.2",
+    "next": "^9.4.2",
+    "next-seo": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-ga": "^3.0.0",
+    "react-markdown": "^4.2.2",
+    "react-media": "^1.9.2",
+    "react-redux": "^7.1.0",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.9.5"
   }
 }

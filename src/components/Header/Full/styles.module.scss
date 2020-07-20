@@ -1,0 +1,50 @@
+@import "core";
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  margin: 24px auto;
+  cursor: pointer;
+  width: 180px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .item {
+    font-weight: 400;
+    font-family: Oswald;
+    text-transform: uppercase !important;
+  }
+}
+
+.navbar {
+  box-shadow: none !important;
+}
+
+.topNav {
+  position: relative;
+  background: $dark-gray2 !important;
+  box-shadow: none !important;
+}
+
+.topNavContainer {
+  max-width: 1012px;
+  margin: auto;
+}
+
+.mobile {
+  background: $dark-gray2 !important;
+}
