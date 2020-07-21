@@ -17,7 +17,8 @@ import {
 import { externalLink } from "utils/constants";
 import AvatarMenu from "./AvatarMenu";
 import styles from "./styles.module.scss";
-import Logo from "./VNPT_Logo.svg";
+import Logo from "./Logo.svg";
+import VNPT_Logo from "./VNPT_Logo.svg";
 import Link from "next/link";
 
 export interface NavItem {
@@ -36,26 +37,42 @@ export const NavMenu: NavItem[] = [
   {
     text: "Trang chủ",
     href: "/",
-    icon: IconNames.SHOP,
+    icon: IconNames.HOME,
   },
   {
-    text: "Thông tin tài khoản",
-    href: "/about",
-    icon: IconNames.INFO_SIGN,
+    text: "Danh sách fiber phát triển mới",
+    href: "/",
+    icon: IconNames.TH_LIST,
   },
   {
-    text: "Tính Fiber",
-    href: externalLink.PARTNERSHIP,
-    icon: IconNames.SHOP,
-    target: "blank",
+    text: "Các chức năng",
+    href: "/",
+    icon: IconNames.PROJECTS,
+    // children: [
+    //   {
+    //     text: "DS Fiber đã thưởng",
+    //     href: "/",
+    //     icon: IconNames.LIST,
+    //   },
+    //   {
+    //     text: "DS Fiber thanh lý trước thời hạn",
+    //     href: "/",
+    //     icon: IconNames.FILTER_LIST,
+    //   },
+    //   {
+    //     text: "DS thưởng, phạt",
+    //     href: "/",
+    //     icon: IconNames.CALCULATOR,
+    //   },
+    // ],
   },
 ];
 
 const buildMenu = (items: typeof NavMenu) => {
   return (
     <Menu large>
-      {items.map((item) => (
-        <Link href={item.href}>
+      {items.map((item, index) => (
+        <Link href={item.href} key={index}>
           <MenuItem text={item.text} icon={item.icon} />
         </Link>
       ))}
@@ -75,9 +92,8 @@ const HeaderFull: React.FC<Props> = (props) => {
           <Navbar.Group style={condense} align={Alignment.LEFT}>
             <AnchorButton
               minimal
-              icon="phone"
-              href="tel:800126"
-              text="Gọi hotline: (+28)800126"
+              icon={<img alt="VNPT" className={styles.icon_logo} src={Logo} />}
+              text="Trung Tâm Công Nghệ Thông Tin"
             />
           </Navbar.Group>
           <Navbar.Group style={condense} align={Alignment.RIGHT}>
@@ -87,12 +103,12 @@ const HeaderFull: React.FC<Props> = (props) => {
       </Navbar>
 
       <Link href="/">
-        <img alt="VNPT" className={styles.logo} src={Logo} />
+        <img alt="VNPT" className={styles.logo} src={VNPT_Logo} />
       </Link>
 
       <Navbar className={styles.navbar}>
         <Navbar.Group align={Alignment.CENTER}>
-          {NavMenu.map((item) =>
+          {NavMenu.map((item, index) =>
             item.children ? (
               <Popover
                 key={item.href}

@@ -8,10 +8,16 @@
   position: relative;
 }
 
+.icon_logo {
+  cursor: pointer;
+  width: 25px;
+  color: white;
+}
+
 .logo {
   margin: 24px auto;
   cursor: pointer;
-  width: 180px;
+  width: 150px;
 }
 
 .navbar {
@@ -36,7 +42,7 @@
 
 .topNav {
   position: relative;
-  background: $dark-gray2 !important;
+  background: $blue3 !important;
   box-shadow: none !important;
 }
 
@@ -46,5 +52,5 @@
 }
 
 .mobile {
-  background: $dark-gray2 !important;
+  background: $blue3 !important;
 }

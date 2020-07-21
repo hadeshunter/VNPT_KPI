@@ -30,6 +30,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
         <div className={styles.main}>
           <Header />
           <div className={styles.body}>
+            <div></div>
             <props.Component {...props.pageProps} />
           </div>
           <Footer className={styles.footer} />

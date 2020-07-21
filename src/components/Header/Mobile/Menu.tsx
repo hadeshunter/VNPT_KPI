@@ -35,7 +35,7 @@ const HeaderMobileMenu: React.FC<Props> = ({ isOpen, onClose }) => {
           <AnchorButton large icon={IconNames.MENU} minimal onClick={onClose} />
         </Navbar.Group>
         <div className={classNames(styles.welcome, Classes.TEXT_MUTED)}>
-          VNPT kinh chao
+          VNPT KPI
         </div>
       </Navbar>
 

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { IconNames } from "@blueprintjs/icons";
 import { Navbar, Classes, AnchorButton } from "@blueprintjs/core";
 
-import Logo from "./VNPT_Logo.svg";
+import Logo from "./Logo.svg";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 
@@ -24,6 +24,7 @@ const HeaderMobileNav: React.FC<Props> = ({ open }) => {
           </div>
         </Link>
       </div>
+      <div className={styles.right}></div>
     </Navbar>
   );
 };

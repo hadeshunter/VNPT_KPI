@@ -2,8 +2,9 @@ import api from "./api";
 
 export interface User {
   id: number;
-  name: string;
+  username: string;
   token: string;
+  fullname: string;
   email: string;
   phone: string;
 }

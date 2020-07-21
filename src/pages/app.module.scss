@@ -19,6 +19,10 @@
   @include media(pc) {
     width: $break-large;
   }
+
+  @include media(phone) {
+    padding-top: 50px !important;
+  }
 }
 
 .footer {

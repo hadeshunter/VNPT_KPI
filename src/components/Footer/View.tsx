@@ -5,7 +5,7 @@ import { Classes, AnchorButton, Menu } from "@blueprintjs/core";
 
 import Panel from "components/Panel";
 import styles from "./styles.module.scss";
-import { externalLink, internalLink } from "utils/constants";
+import { externalLink } from "utils/constants";
 import Link from "next/link";
 
 interface Props {
@@ -20,30 +20,27 @@ export default function Footer(props: Props) {
         <Panel small title="Nội dung">
           <Menu style={menuStyle} large className={styles.content}>
             <Link href="/">
-              <Menu.Item icon={IconNames.SHOP} text="Trang chủ" />
+              <Menu.Item icon={IconNames.HOME} text="Trang chủ" />
             </Link>
             <Link href="/user">
               <Menu.Item
-                icon={IconNames.INFO_SIGN}
-                text="Thông tin tài khoản"
+                icon={IconNames.TH_LIST}
+                text="Danh sách fiber phát triển mới"
               />
             </Link>
 
-            <Menu.Item text="Các chính sách" icon={IconNames.PROJECTS}>
-              <Link href={internalLink.POLICY.PAYMENT}>
-                <Menu.Item icon={IconNames.LOCK} text="Bảo mật thanh toán" />
+            <Menu.Item text="Các chức năng" icon={IconNames.PROJECTS}>
+              <Link href="/">
+                <Menu.Item icon={IconNames.LIST} text="DS Fiber đã thưởng" />
               </Link>
-              <Link href={internalLink.POLICY.PRIVACY}>
+              <Link href="/">
                 <Menu.Item
-                  icon={IconNames.PERSON}
-                  text="Bảo vệ thông tin người tiêu dùng"
+                  icon={IconNames.FILTER_LIST}
+                  text="DS Fiber thanh lý trước thời hạn"
                 />
               </Link>
-              <Link href={internalLink.POLICY.SHIPPING_AND_RETURNS}>
-                <Menu.Item
-                  icon={IconNames.BOX}
-                  text="Giao nhận, vận chuyển và hoàn tiền"
-                />
+              <Link href="/">
+                <Menu.Item icon={IconNames.CALCULATOR} text="DS thưởng, phạt" />
               </Link>
             </Menu.Item>
           </Menu>
@@ -60,12 +57,6 @@ export default function Footer(props: Props) {
               />
               <Menu.Item
                 target="blank"
-                href={externalLink.FEEDBACK.QUALITY}
-                icon={IconNames.BOX}
-                text="Chất lượng sản phẩm"
-              />
-              <Menu.Item
-                target="blank"
                 href={externalLink.FEEDBACK.OTHER}
                 icon={IconNames.CHAT}
                 text="Phản hồi khác"
@@ -73,43 +64,21 @@ export default function Footer(props: Props) {
             </Menu>
 
             <div className={Classes.TEXT_MUTED}>
-              Phản hồi của quý khách sẽ được gửi trực tiếp đến Ban Giám đốc của
-              Phát Thành.
+              Phản hồi của bạn sẽ được gửi trực tiếp đến hòm thư tiếp nhận ý
+              kiến của trung tâm CNTT.
             </div>
           </Panel>
         </div>
 
         <div>
-          <Panel small title="THANH TOÁN">
-            <div className={styles.paymentlist}>
-              <img
-                alt="momo"
-                style={{ height: 48 }}
-                src="/static/payment/momo.png"
-              />
-              <img
-                alt="zalopay"
-                className={styles.paymentPending}
-                style={{ height: 48 }}
-                src="/static/payment/zalopay.png"
-              />
-            </div>
+          <Panel small title="Thông tin">
             <div className={Classes.TEXT_MUTED}>
-              Chúng tôi sẽ tích cực cập nhật những hình thức thanh toán mới để
-              phục vụ quý khách.
+              TRUNG TÂM CÔNG NGHỆ THÔNG TIN
             </div>
 
             <div style={{ marginTop: 8 }}>
-              <a target="blank" href={externalLink.GOV}>
-                <img
-                  alt="online.gov.vn"
-                  style={{ width: 150 }}
-                  src="/static/gov.png"
-                />
-              </a>
               <div className={Classes.TEXT_MUTED}>
-                Website của Phát Thành được Bộ Công Thương kiểm duyệt kể từ ngày
-                21/03/2019. Quý khách hoàn toàn yên tâm khi mua hàng tại đây.
+                Website được xây dựng bởi đội ngũ IT trực thuộc trung tâm CNTT.
               </div>
             </div>
           </Panel>
@@ -121,8 +90,8 @@ export default function Footer(props: Props) {
           <div style={{ padding: 5 }}>
             <span className={Classes.TEXT_MUTED}>©&nbsp;</span>
             <span>
-              {Math.max(new Date().getFullYear(), 2019)} Công ty TNHH SX&TM Cà
-              Phê Phát Thành
+              {Math.max(new Date().getFullYear(), 2019)} Trung tâm CNTT VNPT
+              TPHCM
             </span>
           </div>
           <div>
@@ -131,7 +100,7 @@ export default function Footer(props: Props) {
               icon={IconNames.PHONE}
               href={externalLink.HOTLINE}
             >
-              Hotline: 1900-8688
+              Hotline: (+28)800126
             </AnchorButton>
           </div>
           <AnchorButton
@@ -141,7 +110,7 @@ export default function Footer(props: Props) {
             target="blank"
             href={externalLink.GOOGLE_MAP}
           >
-            987 Tạ Quang Bửu, Phường 6, Quận 8, TPHCM
+            12/1 NTMK,&nbsp; P.ĐaKao,&nbsp; Q.1,&nbsp; TP.HCM
           </AnchorButton>
         </div>
       </div>
